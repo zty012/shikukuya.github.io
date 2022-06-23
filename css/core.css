@@ -1,4 +1,8 @@
 a {
-  color: Black;
+  color: #000000;
+  text-decoration: none;
+}
+a.blue {
+  color: #007bff;
   text-decoration: none;
 }
