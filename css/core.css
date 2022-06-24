@@ -33,5 +33,14 @@ a.link {
   background-color: #FFFFFF;
   text-align: center;
   overflow: auto;
+}
+
+#main:hover {
+  animation: mainhover 0.8;
   box-shadow: 0 14px 14px 0 rgba(0, 0, 0, 0.2), 0 0px 16px 0 rgba(0, 0, 0, 0.19);
+}
+
+@keyframes mainhover {
+  from {}
+  to {box-shadow: 0 14px 14px 0 rgba(0, 0, 0, 0.2), 0 0px 16px 0 rgba(0, 0, 0, 0.19);}
 }
