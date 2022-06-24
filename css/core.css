@@ -18,6 +18,11 @@ a.link {
   color: #0091ff;
 }
 
+@keyframes mainhover {
+  from {}
+  to {box-shadow: 0 14px 14px 0 rgba(0, 0, 0, 0.2), 0 0px 16px 0 rgba(0, 0, 0, 0.19);}
+}
+
 #main {
   border-radius: 10px;
   border: 2px solid #FFFFFF;
@@ -38,9 +43,4 @@ a.link {
 #main:hover {
   animation: mainhover 0.8s;
   box-shadow: 0 14px 14px 0 rgba(0, 0, 0, 0.2), 0 0px 16px 0 rgba(0, 0, 0, 0.19);
-}
-
-@keyframes mainhover {
-  from {}
-  to {box-shadow: 0 14px 14px 0 rgba(0, 0, 0, 0.2), 0 0px 16px 0 rgba(0, 0, 0, 0.19);}
 }
