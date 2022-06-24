@@ -1,13 +1,3 @@
-@keyframes link {
-  from {
-    color: #FFFFFF;
-  }
-
-  to {
-    color: #0091ff;
-  }
-}
-
 * {
   color: #000000;
   text-decoration: none;
@@ -26,10 +16,6 @@ body {
 
 a.link {
   color: #0091ff;
-}
-
-a:hover {
-  animation: link 1;
 }
 
 #main {
