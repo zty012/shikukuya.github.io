@@ -1,6 +1,7 @@
 * {
   color: #FFFFFF;
   text-decoration: none;
+  font-family: Arial;
 }
 html {
   background-image: linear-gradient(to bottom right, #00b7ff, #00e1ff);
