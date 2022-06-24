@@ -23,6 +23,6 @@ function checkLanguage() {
 }
 
 function language(lang) {
-  document.cookie = "lang=" + lang;
-  window.location.href = "//shikukuya.github.io/" + lang
+  document.cookie = "lang=" + lang; + "; expires=Thu, 18 Dec 2043 12:00:00 GMT";
+  window.location.href = "//shikukuya.github.io/" + lang;
 }
