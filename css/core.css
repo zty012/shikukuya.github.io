@@ -32,4 +32,5 @@ a.link {
   margin: auto;
   background-color: #FFFFFF;
   text-align: center;
+  overflow: auto;
 }
