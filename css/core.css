@@ -33,5 +33,5 @@ a.link {
   background-color: #FFFFFF;
   text-align: center;
   overflow: auto;
-  text-shadow: 5px 5px 5px #808080;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
