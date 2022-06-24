@@ -33,4 +33,5 @@ a.link {
   background-color: #FFFFFF;
   text-align: center;
   overflow: auto;
+  text-shadow: 5px 5px 5px #808080;
 }
