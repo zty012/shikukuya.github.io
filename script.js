@@ -7,6 +7,17 @@ function getCookie(name) {
   }
 }
 
+function selectLanguage() {
+  window.location.href = "//shikukuya.github.io/language";
+}
+
 function checkLanguage() {
-  alert(getCookie("1"))
+  var lang = getCookie("lang");
+  if (lang == null) {
+    selectLanguage();
+  } else if (lang == "zh-cn") {
+    window.location.href = "//shikukuya.github.io/zh-cn";
+  } else {
+    window.location.href = "//shikukuya.github.io/en-us";
+  }
 }
