@@ -1,0 +1,4 @@
+.pug-cache
+Gemfile.lock
+dist
+node_modules
