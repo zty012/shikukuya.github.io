@@ -15,7 +15,7 @@ body {
 }
 
 a.link {
-  color: #0000FF;
+  color: #0091ff;
 }
 
 #main {
@@ -30,4 +30,5 @@ a.link {
   right: 0;
   bottom: 0;
   margin: auto;
+  color: #FFFFFF;
 }
