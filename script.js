@@ -21,3 +21,7 @@ function checkLanguage() {
     window.location.href = "//shikukuya.github.io/en-us";
   }
 }
+
+function language(lang) {
+  document.cookie = "lang=" + lang;
+}
