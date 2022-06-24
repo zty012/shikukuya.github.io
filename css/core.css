@@ -1,6 +1,7 @@
 * {
   color: #FFFFFF;
   font-family:'Segoe UI';
+  text-decoration: none;
 }
 html {
   background-image: linear-gradient(to bottom right, #00b7ff, #00e1ff);
