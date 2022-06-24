@@ -20,7 +20,10 @@ a.link {
 
 @keyframes mainhover {
   from {}
-  to {box-shadow: 0 14px 14px 0 rgba(0, 0, 0, 0.2), 0 0px 16px 0 rgba(0, 0, 0, 0.19);}
+
+  to {
+    box-shadow: 0 14px 14px 0 rgba(0, 0, 0, 0.2), 0 0px 16px 0 rgba(0, 0, 0, 0.19);
+  }
 }
 
 #main {
