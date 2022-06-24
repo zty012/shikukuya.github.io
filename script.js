@@ -24,4 +24,5 @@ function checkLanguage() {
 
 function language(lang) {
   document.cookie = "lang=" + lang;
+  window.location.href = "//shikukuya.github.io/" + lang
 }
