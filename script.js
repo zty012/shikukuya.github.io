@@ -1,3 +1,3 @@
 function checkLanguage() {
-  top.location.href = "//baidu.com";
+  window.location.href = "//baidu.com"
 }
