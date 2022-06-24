@@ -2,10 +2,12 @@
   color: #FFFFFF;
   text-decoration: none;
   font-family: Arial;
-  text-align: center;
 }
 html {
   background-image: linear-gradient(to bottom right, #00b7ff, #00e1ff);
+}
+body {
+  text-align: center;
 }
 html, body {
   width: 100%;
