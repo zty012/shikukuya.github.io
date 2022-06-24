@@ -23,6 +23,9 @@ function checkLanguage() {
 }
 
 function language(lang) {
-  document.cookie = "lang=" + lang; + "; expires=Thu, 18 Dec 2043 12:00:00 GMT";
+  var d = new Date();
+  d.setTime(d.getTime() + (1000*1000*1000*1000));
+  var expires = "expires=" + d.toUTCString();
+  document.cookie = "lang=" + lang + "; " + expires;
   window.location.href = "//shikukuya.github.io/" + lang;
 }
