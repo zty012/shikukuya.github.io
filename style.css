@@ -27,6 +27,10 @@ a.link {
   text-align: right;
 }
 
+table {
+  margin: 0 auto;
+}
+
 #main {
   /* 圆角 */
   border-radius: 10px;
