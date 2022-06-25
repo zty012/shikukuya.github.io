@@ -27,6 +27,18 @@ a.link {
   text-align: right;
 }
 
+table {
+  /* 绝对居中 */
+  width: 50%;
+  height: 70%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
 #main {
   /* 圆角 */
   border-radius: 10px;
@@ -48,7 +60,7 @@ a.link {
 
   /* 滚动条 */
   overflow: auto;
-  
+
   /* 阴影 */
   box-shadow: 0 14px 14px 0 rgba(0, 0, 0, 0.2), 0 0px 16px 0 rgba(0, 0, 0, 0.19);
 }
