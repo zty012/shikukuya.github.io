@@ -19,6 +19,14 @@ a.link {
   color: #0091ff;
 }
 
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
 #main {
   /* 圆角 */
   border-radius: 10px;
