@@ -31,6 +31,10 @@ table {
   margin: 0 auto;
 }
 
+a {
+  font-size: x-large;
+}
+
 #main {
   /* 圆角 */
   border-radius: 10px;
