@@ -27,16 +27,6 @@ a.link {
   text-align: right;
 }
 
-table {
-  /* 绝对居中 */
-  position: absolute; 
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-}
-
 #main {
   /* 圆角 */
   border-radius: 10px;
