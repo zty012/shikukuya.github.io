@@ -31,7 +31,8 @@ table {
   margin: 0 auto;
 }
 
-a {
+a,
+p {
   font-size: x-large;
 }
 
