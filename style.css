@@ -27,12 +27,6 @@ a.link {
   text-align: right;
 }
 
-div.download {
-  background-image: url("/img/download.png");
-  width: 25px;
-  height: 25px;
-}
-
 #main {
   /* 圆角 */
   border-radius: 10px;
