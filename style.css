@@ -37,6 +37,14 @@ span {
   font-size: x-large;
 }
 
+a.on {
+  color: green;
+}
+
+a.off {
+  color: red;
+}
+
 #main {
   /* 圆角 */
   border-radius: 10px;
