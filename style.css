@@ -36,9 +36,8 @@ p {
   font-size: x-large;
 }
 
-#navbar * {
-  float: left;
-  nav-right: 15px;
+.line {
+  display: inline-block;
 }
 
 #main {
