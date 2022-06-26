@@ -32,7 +32,8 @@ table {
 }
 
 a,
-p {
+p,
+span {
   font-size: x-large;
 }
 
