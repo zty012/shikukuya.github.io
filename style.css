@@ -37,7 +37,7 @@ p {
 }
 
 .line {
-  display: inline;
+  float: left;
 }
 
 #main {
