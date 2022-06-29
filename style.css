@@ -72,10 +72,9 @@ a.off {
 }
 
 /* 深色模式适配 */
-/* 深色模式适配 */
 @media (prefers-color-scheme: dark) {
   * {
-    color: #D800FF;
+    color: #FFFFFF;
   }
 
   html {
