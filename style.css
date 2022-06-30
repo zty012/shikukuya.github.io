@@ -45,17 +45,6 @@ a.off {
   color: red;
 }
 
-.ccenter {
-  width: 50%;
-  height: 70%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-}
-
 #main {
   /* 圆角 */
   border-radius: 10px;
@@ -65,38 +54,12 @@ a.off {
   /* 绝对居中 */
   width: 50%;
   height: 70%;
-  /* position: absolute;
+  position: absolute;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
-  margin: auto; */
-
-  background-color: #FFFFFF;
-  text-align: center;
-
-  /* 滚动条 */
-  overflow: auto;
-
-  /* 阴影 */
-  box-shadow: 0 14px 14px 0 rgba(0, 0, 0, 0.2), 0 0px 16px 0 rgba(0, 0, 0, 0.19);
-}
-
-#bar {
-  /* 圆角 */
-  border-radius: 10px;
-  border: 2px solid #FFFFFF;
-  padding: 20px;
-
-  /* 绝对居中 */
-  width: 50%;
-  height: 70%;
-  /* position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto; */
+  margin: auto;
 
   background-color: #FFFFFF;
   text-align: center;
