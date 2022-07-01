@@ -29,3 +29,5 @@ function language(lang) {
   document.cookie = "lang=" + lang + "; " + expires;
   window.location.href = "//shikukuya.github.io/" + lang;
 }
+
+console.log("\n   WELCOME TO SHIKUKUYA.GITHUB.IO")
