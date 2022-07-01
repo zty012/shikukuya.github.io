@@ -30,4 +30,4 @@ function language(lang) {
   window.location.href = "//shikukuya.github.io/" + lang;
 }
 
-console.log("\n   WELCOME TO SHIKUKUYA.GITHUB.IO")
+console.log("\nWELCOME TO SHIKUKUYA.GITHUB.IO\n")
