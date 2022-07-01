@@ -24,10 +24,24 @@ function checkLanguage() {
 
 function language(lang) {
   var d = new Date();
-  d.setTime(d.getTime() + (1000*1000*1000*1000));
+  d.setTime(d.getTime() + (1000 * 1000 * 1000 * 1000));
   var expires = "expires=" + d.toUTCString();
   document.cookie = "lang=" + lang + "; " + expires;
   window.location.href = "//shikukuya.github.io/" + lang;
+}
+
+function hitokoto() {
+  $(document).ready(function () {
+    $.ajax(
+      {
+        dataType: "json",
+        url: "https://v1.hitokoto.cn/",
+        cache: false,
+        success: function (response) {
+          $("#hitokoto").html(response["hitokoto"]);
+        }
+      })
+  });
 }
 
 console.log("\nWELCOME TO SHIKUKUYA.GITHUB.IO\n")
