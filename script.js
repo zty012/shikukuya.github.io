@@ -45,3 +45,6 @@ function hitokoto() {
 }
 
 console.log("\nWELCOME TO SHIKUKUYA.GITHUB.IO\n")
+if (screen.width <= 960) {
+  document.$("#main").setAttribute("class", "mobile")
+}
