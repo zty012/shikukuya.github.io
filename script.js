@@ -49,4 +49,5 @@ function checkMobile() {
   }
 }
 
+console.log("----------");
 console.log("Loading page...");
