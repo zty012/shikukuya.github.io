@@ -48,3 +48,5 @@ function checkMobile() {
     console.log("Switching to PC mode...");
   }
 }
+
+console.log("Loading page...");
