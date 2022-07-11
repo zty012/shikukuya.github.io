@@ -44,6 +44,8 @@ function hitokoto() {
   });
 }
 
-if (screen.width <= 960) {
-  document.getElementById("main").setAttribute("class", "mobile");
+function checkMobile() {
+  if (screen.width <= 960) {
+    document.getElementById("main").setAttribute("class", "mobile");
+  }
 }
