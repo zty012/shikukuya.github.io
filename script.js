@@ -12,12 +12,17 @@ function selectLanguage() {
 }
 
 function checkLanguage() {
+  console.log("Checking language...");
   var lang = getCookie("lang");
+  console.log("Cookie: " + lang);
   if (lang == null) {
+    console.log("Not selected a language yet");
     selectLanguage();
   } else if (lang == "zh-cn") {
+    console.log("Redircting to zh-cn...");
     window.location.href = "//shikukuya.github.io/zh-cn";
   } else {
+    console.log("Redircting to en-us...");
     window.location.href = "//shikukuya.github.io/en-us";
   }
 }
@@ -30,22 +35,16 @@ function language(lang) {
   window.location.href = "//shikukuya.github.io/" + lang;
 }
 
-function hitokoto() {
-  $(document).ready(function () {
-    $.ajax(
-      {
-        dataType: "json",
-        url: "https://v1.hitokoto.cn/",
-        cache: false,
-        success: function (response) {
-          $("#hitokoto").html(response["hitokoto"]);
-        }
-      })
-  });
-}
-
 function checkMobile() {
-  if (screen.width <= 960) {
+  let width = screen.width
+  console.log("Checking mobile...");
+  console.log("Screen width: " + width);
+  if (width <= 960) {
+    console.log("Screen width <= 960");
+    console.log("Switching to mobile mode...");
     document.getElementById("main").setAttribute("class", "mobile");
+  } else {
+    console.log("Screen width > 960");
+    console.log("Switching to PC mode...");
   }
 }
