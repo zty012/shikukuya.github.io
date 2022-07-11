@@ -46,6 +46,7 @@ function checkMobile() {
   } else {
     console.log("Screen width > 960");
     console.log("Switching to PC mode...");
+    document.getElementById("main").setAttribute("class", "");
   }
 }
 
