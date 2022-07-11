@@ -45,5 +45,5 @@ function hitokoto() {
 }
 
 if (screen.width <= 960) {
-  document.getElementById("main").setAttribute("class", "mobile")
+  document.getElementById("main").setAttribute("class", "mobile");
 }
