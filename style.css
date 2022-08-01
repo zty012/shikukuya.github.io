@@ -78,16 +78,8 @@ a.off {
   top: 5px;
 }
 
-#main.mobile * {
-  font-size: 50px;
-}
-
-#main.mobile h1 {
-  font-size: 60px;
-}
-
 /* 深色模式适配 */
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) { 
   * {
     color: #FFFFFF;
   }
