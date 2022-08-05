@@ -2,7 +2,7 @@
 
 > 我是shikukuya, 这是我的官网
 
-```
+```plain
 所有代码都是我自己写的
 ```
 
@@ -10,7 +10,7 @@
 
 `bilibili`: shikukuya
 
-`Youtube`: shikukuya
+`Youtube`: shikukuya CN
 
 `QQ`: 2449637813
 

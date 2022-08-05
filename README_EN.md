@@ -2,7 +2,7 @@
 
 > Hello, I'm shikukuya. This is my offical website.
 
-```
+```plain
 All code is written by myself.
 ```
 
@@ -10,7 +10,7 @@ All code is written by myself.
 
 `bilibili`: shikukuya
 
-`Youtube`: shikukuya
+`Youtube`: shikukuya CN
 
 `QQ`: 2449637813
 
