@@ -76,6 +76,8 @@ a.off {
   height: 100%;
   position: relative;
   top: 5px;
+  box-shadow: none;
+  border: none;
 }
 
 /* 深色模式适配 */
