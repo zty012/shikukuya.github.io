@@ -12,9 +12,19 @@
     <StackPanel Margin="25,40,23,15">
         <TextBlock Margin="0,0,0,1" Text="ToiletMC 客户端：v0.2.0" />
         <TextBlock Margin="0,0,0,1" Text="ToiletMC 服务器：三周目" />
-        <TextBlock Margin="0,0,0,1" Text="游戏：1.19.2" />
+        <TextBlock Margin="0,0,0,1" Text="游戏本体：1.19.2" />
         <TextBlock Margin="0,0,0,1" Text="整合包：v0.1.0" />
         <TextBlock Margin="0,0,0,1" Text="游戏 UI：v0.1.0" />
-        <TextBlock Margin="0,0,0,6" Text="资源包 UI：v0.2.0" />
+    </StackPanel>
+</local:MyCard>
+
+<local:MyCard Title="版本信息" CanSwap="True" IsSwaped="True">
+    <StackPanel Margin="25,40,23,15">
+        <TextBlock Margin="0,0,0,1" Text="ToiletMC 客户端：v0.2.0" />
+        <TextBlock Margin="0,0,0,1" Text="ToiletMC 服务器：三周目" />
+        <TextBlock Margin="0,0,0,1" Text="游戏本体：1.19.2" />
+        <TextBlock Margin="0,0,0,1" Text="整合包：v0.1.0" />
+        <TextBlock Margin="0,0,0,4" Text="游戏 UI：v0.1.0" />
+        <TextBlock Margin="0,0,0,1" Text="WARNING: 撤硕启动器更新时主页会自动更新，但是游戏本体不会更新，所以如果发现[游戏本体/整合包/游戏UI]的版本发生变化，请到 官网/QQ群 下载最新版本" Foreground="e44d26" TextWrapping="True" />
     </StackPanel>
 </local:MyCard>
