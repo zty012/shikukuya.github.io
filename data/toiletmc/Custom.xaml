@@ -8,13 +8,9 @@
     </StackPanel>
 </local:MyCard>
 
-<local:MyCard Title="版本信息" CanSwap="True" IsSwaped="True">
+<local:MyCard Title="公告" CanSwap="True" IsSwaped="False">
     <StackPanel Margin="25,40,23,15">
-        <TextBlock Margin="0,0,0,1" Text="ToiletMC 客户端：v0.2.0" />
-        <TextBlock Margin="0,0,0,1" Text="ToiletMC 服务器：三周目" />
-        <TextBlock Margin="0,0,0,1" Text="游戏本体：1.19.2" />
-        <TextBlock Margin="0,0,0,1" Text="整合包：v0.1.0" />
-        <TextBlock Margin="0,0,0,1" Text="游戏 UI：v0.1.0" />
+        <TextBlock Margin="25,40,23,15" Text="没有" />
     </StackPanel>
 </local:MyCard>
 
