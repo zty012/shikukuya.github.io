@@ -54,10 +54,14 @@
     </style>
     <script>
       function copy(t) {
-        navigator.clipboard.writeText(t);
+        let input = document.createElement("input");
+        document.body.appendChild(input);
+        input.value = t;
+        input.select();
+        document.execCommand("copy");
+        input.remove();
         alert("复制成功");
       }
-
       $(function ($) {
         $("#response").hide();
         $("#submit").click(function (e) {
