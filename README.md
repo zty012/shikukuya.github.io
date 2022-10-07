@@ -1,5 +1,3 @@
-# README file is here
+# shikukuya's offical website
 
-[Chinese](README_CN.md)
-
-[English](README_EN.md)
+[sitemap](/sitemap.md)
