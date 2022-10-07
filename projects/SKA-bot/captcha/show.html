@@ -6,27 +6,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>hCaptcha</title>
     <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
-      body > div {
+      body,
+      html {
+        width: 100vw;
+        height: 100vh;
+      }
+
+      body {
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .block {
+        margin-bottom: 60px;
+        display: block;
+        border: 10px solid #00ccff;
+        border-radius: 20px;
+        padding: 20px;
+        overflow: auto;
+      }
+
+      h3 {
+        margin-top: 0px;
+      }
+
+      code {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: small;
+        display: block;
+        padding: 10px;
+        border: 2px solid #bababa;
+        border-radius: 8px;
+        background-color: #eee;
+        margin: 4px;
+        overflow-x: auto;
+        word-wrap: normal;
+      }
+
+      code:hover::before {
+        content: "[复制] ";
+        height: min-content;
       }
     </style>
+    <script>
+      function copyElement(el) {
+        navigator.clipboard.writeText(el.innerText);
+        alert("复制成功");
+      }
+
+      $(function ($) {
+        $("#response").hide();
+        $("#submit").click(function (e) {
+          if (hcaptcha.getResponse() == "") alert("请先完成验证码");
+          else {
+            let resp = hcaptcha.getResponse();
+            let divid5 = ~~(resp.length / 5);
+            $("#cmd1").html("#captcha " + resp.substr(divid5 * 0, divid5 * 1));
+            $("#cmd2").html("#captcha " + resp.substr(divid5 * 1, divid5 * 2));
+            $("#cmd3").html("#captcha " + resp.substr(divid5 * 2, divid5 * 3));
+            $("#cmd4").html("#captcha " + resp.substr(divid5 * 3, divid5 * 4));
+            $("#cmd5").html("#captcha " + resp.substr(divid5 * 4, divid5 * 5));
+            $("#captcha").hide();
+            $("#response").show();
+          }
+        });
+        $("#reset").click(function (e) {
+          hcaptcha.reset();
+        });
+      });
+    </script>
   </head>
 
   <body>
-    <div id="captcha">
+    <div class="block" id="captcha">
       <h3>Step 1. 完成验证码</h3>
       <div
         class="h-captcha"
         data-sitekey="ecc49911-56f9-456e-afc9-b342e65bdc01"
       ></div>
-      <button onclick="submit();">提交</button>
-      <button onclick="hcaptcha.reset();">重置</button>
+      <button id="submit">提交</button>
+      <button id="reset">重置</button>
     </div>
-    <div id="response" hidden>
+    <div class="block" id="response">
       <h3>Step 2. 将验证信息发送给机器人</h3>
+      <p>请在群里依次发送以下消息</p>
+      <i>不用担心刷屏，机器人会自动撤回验证消息</i>
+      <code id="cmd1" onclick="copyElement(this);"></code>
+      <code id="cmd2" onclick="copyElement(this);"></code>
+      <code id="cmd3" onclick="copyElement(this);"></code>
+      <code id="cmd4" onclick="copyElement(this);"></code>
+      <code id="cmd5" onclick="copyElement(this);"></code>
     </div>
   </body>
 </html>
