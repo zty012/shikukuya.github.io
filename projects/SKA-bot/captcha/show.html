@@ -53,8 +53,8 @@
       }
     </style>
     <script>
-      function copyElement(el) {
-        navigator.clipboard.writeText(el.innerText);
+      function copy(t) {
+        navigator.clipboard.writeText(t);
         alert("复制成功");
       }
 
@@ -95,11 +95,11 @@
       <h3>Step 2. 将验证信息发送给机器人</h3>
       <p>请在群里依次发送以下消息</p>
       <i>不用担心刷屏，机器人会自动撤回验证消息</i>
-      <code id="cmd1" onclick="copyElement(this);"></code>
-      <code id="cmd2" onclick="copyElement(this);"></code>
-      <code id="cmd3" onclick="copyElement(this);"></code>
-      <code id="cmd4" onclick="copyElement(this);"></code>
-      <code id="cmd5" onclick="copyElement(this);"></code>
+      <code id="cmd1" onclick="copy(this.innerText);"></code>
+      <code id="cmd2" onclick="copy(this.innerText);"></code>
+      <code id="cmd3" onclick="copy(this.innerText);"></code>
+      <code id="cmd4" onclick="copy(this.innerText);"></code>
+      <code id="cmd5" onclick="copy(this.innerText);"></code>
     </div>
   </body>
 </html>
