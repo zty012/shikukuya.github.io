@@ -71,16 +71,16 @@
             let resp = hcaptcha.getResponse();
             let divid5 = ~~(resp.length / 5);
             respcheck = 
-              resp.substr(0, divid5 * 1) +
-              resp.substr(divid5 * 1, divid5 * 2) +
-              resp.substr(divid5 * 2, divid5 * 3) +
-              resp.substr(divid5 * 3, divid5 * 4) +
-              resp.substr(divid5 * 4, -1);
-            $("#cmd1").html("#captcha " + resp.substr(0, divid5 * 1));
-            $("#cmd2").html("#captcha " + resp.substr(divid5 * 1, divid5 * 2));
-            $("#cmd3").html("#captcha " + resp.substr(divid5 * 2, divid5 * 3));
-            $("#cmd4").html("#captcha " + resp.substr(divid5 * 3, divid5 * 4));
-            $("#cmd5").html("#captcha " + resp.substr(divid5 * 4, resp.length));
+              resp.sub(0, divid5 * 1) +
+              resp.sub(divid5 * 1, divid5 * 2) +
+              resp.sub(divid5 * 2, divid5 * 3) +
+              resp.sub(divid5 * 3, divid5 * 4) +
+              resp.sub(divid5 * 4, -1);
+            $("#cmd1").html("#captcha " + resp.sub(0, divid5 * 1));
+            $("#cmd2").html("#captcha " + resp.sub(divid5 * 1, divid5 * 2));
+            $("#cmd3").html("#captcha " + resp.sub(divid5 * 2, divid5 * 3));
+            $("#cmd4").html("#captcha " + resp.sub(divid5 * 3, divid5 * 4));
+            $("#cmd5").html("#captcha " + resp.sub(divid5 * 4, resp.length));
             $("#captcha").hide();
             $("#response").show();
           }
