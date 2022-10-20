@@ -40,6 +40,10 @@ a {
   margin: 0;
 }
 
+#nav:hover * {
+  display: block;
+}
+
 #nav-title {
   padding: 0;
   margin-top: 0;
