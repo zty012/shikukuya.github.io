@@ -1,0 +1,15 @@
+{
+    "sources": [
+        {
+            "name": "shikukuya.github.io",
+            "base": "https://shikukuya.github.io/projects/toiletmc/launcher/files",
+            "versions": [
+                {
+                    "name": "1.19.2",
+                    "mc": "1.19.2",
+                    "path": "/1.19.2/1.19.2.zip"
+                }
+            ]
+        }
+    ]
+}
