@@ -1,0 +1,62 @@
+.next {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  transition: all 0.5s;
+}
+
+.next::before,
+.next::after {
+  content: "";
+  background-color: #fff;
+  width: 20px;
+  height: 2px;
+  transform: rotate(45deg);
+  position: relative;
+  bottom: 30px;
+  left: 8px;
+  border-radius: 10px;
+  animation: next-updown 2s 3;
+}
+
+.next::after {
+  transform: rotate(-45deg);
+  left: 0;
+  right: 8px;
+}
+
+@keyframes next-updown {
+  0% {
+    bottom: 30px;
+  }
+  20% {
+    bottom: 40px;
+  }
+  40% {
+    bottom: 30px;
+  }
+  100% {
+  }
+}
+
+.top {
+  display: flex;
+  transition: all 0.5s;
+}
+
+.top > div:nth-child(1),
+.top > div:nth-child(2) {
+  content: "";
+  background-color: #fff;
+  width: 20px;
+  height: 2px;
+  transform: rotate(45deg);
+  position: relative;
+  right: 3.5px;
+  border-radius: 10px;
+}
+
+.top > div:nth-child(1) {
+  transform: rotate(-45deg);
+  left: 3.5px;
+}
