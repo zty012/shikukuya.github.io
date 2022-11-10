@@ -2,13 +2,13 @@
 @import url(./index-main.css);
 @import url(./index-content.css);
 @import url(./index-footer.css);
+@import url(./index-contextmenu.css);
 
 @import url(./icons.css);
 @import url(./animations.css);
 
 * {
   transition: all .3s;
-  user-select: none;
   scroll-behavior: smooth;
 }
 
@@ -78,6 +78,10 @@ select:hover {
   background-color: #111;
 }
 
+hr {
+  background-color: transparent;
+}
+
 ::-webkit-scrollbar {
   background-color: #000;
   max-width: 10px;
@@ -86,4 +90,8 @@ select:hover {
 ::-webkit-scrollbar-thumb {
   background-color: #222;
   border-radius: 10px;
+}
+
+::selection {
+  background-color: rebeccapurple;
 }

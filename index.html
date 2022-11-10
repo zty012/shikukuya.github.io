@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="/css/index.css" />
   </head>
   <body>
-    <nav id="nav">
-      <h3 id="nav-title">shikukuya</h3>
-      <div id="nav-item">
+    <nav class="nav">
+      <h3 class="nav-title">shikukuya</h3>
+      <div class="nav-item">
         <a href="#">
           <h5>主页</h5>
         </a>
@@ -45,7 +45,7 @@
         <p>代表作有：此网站、OnToilet、SKA-bot等</p>
       </div>
     </div>
-    <footer>
+    <footer id="footer">
       <section>
         <h3 class="text-gradient">shikukuya</h3>
         <p>QQ: 2449637813</p>
@@ -104,6 +104,24 @@
       <div class="top">
         <div></div>
         <div></div>
+      </div>
+    </div>
+    <div id="contextmenu">
+      <div class="nav">
+        <h3 class="nav-title">shikukuya</h3>
+        <div class="nav-item">
+          <a href="#">
+            <h5>主页</h5>
+          </a>
+          <a href="#aboutme">
+            <h5>关于我</h5>
+          </a>
+        </div>
+      </div>
+      <div class="nav">
+        <p onclick="$('#totop').click()">返回顶部 ( 右下角按钮 )</p>
+        <hr>
+        <p onclick="document.execCommand('copy')">复制 ( Ctrl+C )</p>
       </div>
     </div>
   </body>

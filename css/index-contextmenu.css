@@ -1,0 +1,23 @@
+#contextmenu {
+  position: fixed !important;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  margin: 0;
+  background-color: rgba(2, 2, 2, 0.5);
+  border-radius: 20px;
+  transition: all 0.1s;
+}
+
+#contextmenu .nav {
+  margin: 15px;
+  position: static;
+}
+
+#contextmenu p {
+  margin: 0;
+}
+
+#contextmenu.hide {
+  opacity: 0;
+}

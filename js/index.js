@@ -14,26 +14,42 @@ function init($) {
     starCount: 4455,
     starSpeedMax: 30,
   });
-  $("#splash").html(
-    shuffle([
-      "啊这",
-      "但凡有20树脂",
-      "原来你也玩原神"
-    ])[0]
-  );
+  $("#splash").html(shuffle(["啊这", "但凡有20树脂", "原来你也玩原神"])[0]);
   $(document).on("scroll", (e) => {
-    if (
-      (document.body.scrollTop || document.documentElement.scrollTop)
-      == 0
-    ) $("#totop").addClass("hide");
+    if ((document.body.scrollTop || document.documentElement.scrollTop) == 0)
+      $("#totop").addClass("hide");
     else $("#totop").removeClass("hide");
-  })
+  });
+  $("#totop").addClass("hide");
   $("#totop").click((e) => {
     $(document).scrollTop(0);
-  })
+  });
+  $("#contextmenu").addClass("hide");
+  $(document).click((e) => {
+    $("#contextmenu").addClass("hide");
+  });
+  $(document).contextmenu((e) => {
+    e = e || window.event;
+    var scrollX =
+      document.documentElement.scrollLeft || document.body.scrollLeft;
+    var scrollY = document.documentElement.scrollTop || document.body.scrollTop;
+    var x = e.pageX || e.clientX + scrollX;
+    var y = e.pageY || e.clientY + scrollY;
+    $("#contextmenu").removeClass("hide");
+    $("#contextmenu").offset({
+      top: y,
+      left: x,
+    });
+    return false;
+  });
+  $("input").contextmenu((e) => {
+    e.stopPropagation();
+    return true;
+  });
   $(".student").click((e) => {
     alert(
-      "这个功能使用了一段“非常简单”的代码：" + `
+      "这个功能使用了一段“非常简单”的代码：" +
+        `
 
         var map = {
           1: "一年级",
@@ -74,7 +90,7 @@ function init($) {
       <p>disable darkreader then refresh this page</p>
       <img src="/img/disable_darkreader/1.png" alt="1">
       <img src="/img/disable_darkreader/2.png" alt="2">
-    `)
+    `);
   }
 }
 

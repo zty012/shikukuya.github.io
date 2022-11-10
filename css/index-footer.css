@@ -1,4 +1,4 @@
-footer {
+#footer {
   display: grid;
   grid-template-columns: repeat(3, calc(100% / 3));
   vertical-align: top;
@@ -21,14 +21,14 @@ section > h3::after {
   background-color: #3f8282;
 }
 
-footer a {
+#footer a {
   color: #00a2ff;
 }
 
 @media only screen and (max-width: 1000px) {
   footer {
-    grid-template-columns: auto;
+    grid-template-columns: auto !important;
     grid-template-rows: repeat(3, auto);
-    padding: 0 100px;
+    padding: 0 100px !important;
   }
 }

@@ -1,7 +1,5 @@
-#nav {
-  width: max-content;
+.nav {
   position: absolute;
-  /* top: 22px; */
   left: 0;
   background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(5px);
@@ -11,20 +9,21 @@
   border-radius: 15px;
 }
 
-#nav:hover {
+.nav:hover {
   background-color: #222;
 }
 
-#nav a:hover {
+.nav a:hover {
   color: #0cf;
 }
 
-#nav-title {
+.nav-title {
   padding: 0;
   margin-top: 0;
+  margin-bottom: .8rem;
 }
 
-#nav-item * {
+.nav-item * {
   display: inline;
   padding-right: 5px;
 }
