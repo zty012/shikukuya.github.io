@@ -6,7 +6,7 @@ function shuffle(arr) {
   return a;
 }
 
-function init($) {
+$(function ($) {
   $("#background").warpDrive({
     width: innerWidth,
     height: innerHeight,
@@ -92,6 +92,4 @@ function init($) {
       <img src="/img/disable_darkreader/2.png" alt="2">
     `);
   }
-}
-
-$(init);
+});
