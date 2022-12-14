@@ -1,128 +1,28 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>shikukuya</title>
-    <script src="/libs/jquery.min.js"></script>
-    <script src="/libs/jquery.warpdrive.min.js"></script>
-    <script src="/js/index.js"></script>
-    <link rel="stylesheet" href="/css/index.css" />
-  </head>
-  <body>
-    <nav class="nav">
-      <h3 class="nav-title">shikukuya</h3>
-      <div class="nav-item">
-        <a href="#">
-          <h5>主页</h5>
-        </a>
-        <a href="#aboutme">
-          <h5>关于我</h5>
-        </a>
-      </div>
-    </nav>
-    <div id="background">
-      <div class="next"></div>
-    </div>
-    <main>
-      <h1 class="text-gradient">shikukuya</h1>
-      <h5 id="splash"></h5>
-    </main>
-    <div id="content">
-      <div id="aboutme">
-        <h1 class="text-gradient">关于我</h1>
-        <p>
-          我是shikukuya，一位《普普通通》的<abbr
-            title="点击了解更多"
-            class="student"
-            >[日期加载失败]</abbr
-          >学生，在上海市第六师范学校第二附属小学上课
-        </p>
-        <p>
-          我热爱编程，会Python、Java（不包括Kotlin）、JS（包括TS）、HTML（包括CSS）
-        </p>
-        <p>代表作有：此网站、<a href="/projects/webdev">WebDev</a>、SKA-bot等</p>
-      </div>
-    </div>
-    <footer id="footer">
-      <section>
-        <h3 class="text-gradient">shikukuya</h3>
-        <p>QQ: 2449637813</p>
-        <select id="language">
-          <option value="zh-cn">简体中文（中国）</option>
-        </select>
-      </section>
-      <section>
-        <h3 class="text-gradient">友情链接</h3>
-        <details>
-          <summary>ToiletMC</summary>
-          <ul>
-            <li><a href="https://toiletmc.net" target="_blank">官网</a></li>
-            <li>
-              <a href="https://plan.toiletmc.net" target="_blank">统计信息</a>
-            </li>
-          </ul>
-        </details>
-        <details>
-          <summary>六师二附小</summary>
-          <ul>
-            <li>
-              <a
-                href="http://www.pslsh2f.pudong-edu.sh.cn/web/index.html"
-                target="_blank"
-                >官网</a
-              >
-            </li>
-            <li>
-              <a href="http://218.78.210.44:9902" target="_blank">童年小筑</a>
-            </li>
-          </ul>
-        </details>
-      </section>
-      <section>
-        <h3 class="text-gradient">Super Big Thanks to</h3>
-        <ul>
-          <li>
-            <a href="https://www.hoyoverse.com" target="_blank">HoYoverse</a>
-            提供文本渐变色的方法和配色方案
-          </li>
-          <li>
-            <a href="https://github.com/NiklasKnaack" target="_blank">Niklas</a>
-            提供星空背景
-          </li>
-          <li>
-            <a href="https://docs.github.com/cn/pages" target="_blank"
-              >Github Pages</a
-            >
-            提供网站托管服务
-          </li>
-        </ul>
-      </section>
-    </footer>
-    <div id="totop">
-      <div class="top">
-        <div></div>
-        <div></div>
-      </div>
-    </div>
-    <div id="contextmenu">
-      <div class="nav">
-        <h3 class="nav-title">shikukuya</h3>
-        <div class="nav-item">
-          <a href="#">
-            <h5>主页</h5>
-          </a>
-          <a href="#aboutme">
-            <h5>关于我</h5>
-          </a>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>shikukuya</title>
+        <link rel="preconnect" href="https://rsms.me/">
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+        <link rel="stylesheet" href="/css/index.css">
+        <link rel="stylesheet" href="/css/codicon.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="/js/index.js"></script>
+    </head>
+    <body>
+        <div id="nav">
+            <span>shikukuya</span>
+            <span class="codicon codicon-menu" id="menu"></span>
+            <span class="codicon codicon-arrow-up" id="prev"></span>
+            <span class="codicon codicon-arrow-down" id="next"></span>
         </div>
-      </div>
-      <div class="nav">
-        <p onclick="$('#totop').click()">返回顶部 ( 右下角按钮 )</p>
-        <hr>
-        <p onclick="document.execCommand('copy')">复制 ( Ctrl+C )</p>
-      </div>
-    </div>
-  </body>
+        <div id="body">
+            <div id="p1">1</div>
+            <div id="p2">2</div>
+            <div id="p3">3</div>
+        </div>
+    </body>
 </html>
