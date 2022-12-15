@@ -1,9 +1,16 @@
+html {
+  --fg: #000;
+  --bg: #eee;
+  --tab-border: #fff;
+}
+
 body {
   width: 100vw;
   height: 100vh;
   margin: 0;
   padding: 0;
   overflow: hidden;
+  background-color: var(--bg);
 }
 
 iframe[id^="browser"] {
@@ -14,26 +21,38 @@ iframe[id^="browser"] {
 #tabs {
   margin: 12px 4px;
   display: flex;
-  cursor: pointer;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 #tabs > div {
   display: flex;
   align-items: center;
-  border: 2px solid #ccc;
+  border: 2px solid var(--tab-border);
   margin: 0 8px;
   padding: 5px;
   border-radius: 5px;
   color: #777;
   transition: all 0.3s;
+  cursor: pointer;
+  min-width: max-content;
+  height: 1em;
 }
 
 #tabs > div[active] {
-  color: #000;
-  border: 2px solid #000;
+  color: var(--fg);
+  border: 2px solid var(--fg);
 }
 
 #tabs > #new {
   font-weight: bold;
   justify-content: center;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  html {
+    --fg: #ccc;
+    --bg: #222;
+    --tab-border: #555;
+  }
 }
