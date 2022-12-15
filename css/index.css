@@ -2,6 +2,9 @@
     font-family: "Inter var", Inter, system-ui, -apple-system, sans-serif;
     cursor: default;
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
     width: 100vw;
     height: 100vh;
@@ -11,6 +14,7 @@ body {
 .codicon-menu {
     /* codicon的menu太宽了 */
     width: 0.8em;
+    margin-right: 5px;
     overflow: hidden;
 }
 #nav {
@@ -19,25 +23,22 @@ body {
     display: flex;
     align-items: center;
     background-color: #fff;
-    position: absolute;
-    left: 0;
+    position: fixed;
     right: 0;
     z-index: 999;
 }
 #nav span:first-child {
     flex: 1;
-}
-#nav .codicon-menu {
     margin-right: 1em;
 }
 #nav .codicon {
     font-size: 1.5em;
 }
-#body,
-#body2 {
+#body {
     background-color: #fff;
     position: absolute;
-    top: 60px;
     width: 100%;
+}
+#body > div {
     overflow: hidden;
 }
