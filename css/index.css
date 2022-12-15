@@ -1,5 +1,5 @@
 * {
-    font-family: Inter, system-ui, -apple-system, sans-serif;
+    font-family: "Inter var", Inter, system-ui, -apple-system, sans-serif;
     cursor: default;
 }
 body {
@@ -7,7 +7,6 @@ body {
     height: 100vh;
     overflow: hidden;
     margin: 0;
-    background: linear-gradient(to top right, #7ae4ff, #64eaff);
 }
 .codicon-menu {
     /* codicon的menu太宽了 */
@@ -16,13 +15,14 @@ body {
 }
 #nav {
     padding: 0 1em;
-    margin: 0.8em 0.8em 0 0.8em;
-    height: 3em;
+    height: 50px;
     display: flex;
     align-items: center;
     background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 0.8em #aaa;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 999;
 }
 #nav span:first-child {
     flex: 1;
@@ -33,11 +33,11 @@ body {
 #nav .codicon {
     font-size: 1.5em;
 }
-#body {
-    padding: 1em;
-    margin: 0.8em;
-    height: calc(100% - 7.4em);
+#body,
+#body2 {
     background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 0.8em #aaa;
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    overflow: hidden;
 }
