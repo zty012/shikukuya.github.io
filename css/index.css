@@ -1,97 +1,43 @@
-@import url(./index-nav.css);
-@import url(./index-main.css);
-@import url(./index-content.css);
-@import url(./index-footer.css);
-@import url(./index-contextmenu.css);
-
-@import url(./icons.css);
-@import url(./animations.css);
-
 * {
-  transition: all .3s;
-  scroll-behavior: smooth;
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+    cursor: default;
 }
-
 body {
-  width: 100vw;
-  padding: 0;
-  margin: 0;
-  overflow-x: hidden;
-  background-color: #000;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    background: linear-gradient(to top right, #7ae4ff, #64eaff);
 }
-
-.hide {
-  opacity: 0;
+.codicon-menu {
+    /* codicon的menu太宽了 */
+    width: 0.8em;
+    overflow: hidden;
 }
-
-canvas, div {
-  padding: 0;
-  margin: 0;
+#nav {
+    padding: 0 1em;
+    margin: 0.8em 0.8em 0 0.8em;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 0.8em #aaa;
 }
-
-a {
-  color: white;
-  text-decoration: none;
+#nav span:first-child {
+    flex: 1;
 }
-
-#background {
-  z-index: -999;
-  display: flex;
-  position: absolute;
-  top: 0;
-  left: 0;
-  text-align: center;
-  align-items: flex-end;
-  flex-direction: column-reverse;
+#nav .codicon-menu {
+    margin-right: 1em;
 }
-
-#totop {
-  background-color: #000;
-  width: 70px;
-  height: 70px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  border-radius: 100%;
-  box-shadow: 0 0 30px #222;
-  transition: all .2s;
+#nav .codicon {
+    font-size: 1.5em;
 }
-
-#totop:hover {
-  background-color: #111;
-}
-
-select {
-  padding: 13px;
-  padding-bottom: 11px;
-  border-radius: 10px;
-  background-color: #222;
-  color: #fff;
-  appearance: none;
-  transition: all .5s;
-}
-
-select:hover {
-  background-color: #111;
-}
-
-hr {
-  background-color: transparent;
-}
-
-::-webkit-scrollbar {
-  background-color: #000;
-  max-width: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #222;
-  border-radius: 10px;
-}
-
-::selection {
-  background-color: rebeccapurple;
+#body {
+    padding: 1em;
+    margin: 0.8em;
+    height: calc(100% - 7.4em);
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 0.8em #aaa;
 }
