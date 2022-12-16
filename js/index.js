@@ -2,13 +2,17 @@ $(() => {
     let current = 1;
     const next = async () => {
         console.log("next");
-        current++;
-        $(`#body > div:nth-child(${current})`)[0].scrollIntoView();
+        if (current < $("#body > div").length) {
+            current++;
+            $(`#body > div:nth-child(${current})`)[0].scrollIntoView();
+        }
     };
     const prev = async () => {
         console.log("prev");
-        current--;
-        $(`#body > div:nth-child(${current})`)[0].scrollIntoView();
+        if (current > 0) {
+            current--;
+            $(`#body > div:nth-child(${current})`)[0].scrollIntoView();
+        }
     };
     const menu = () => {
         console.log("menu");
@@ -32,6 +36,7 @@ $(() => {
     $("#menu")[0].addEventListener("click", (e) => {
         menu();
     });
+    $("#body > div:first-child")[0].scrollIntoView();
     $("#body > div").css("height", innerHeight + "px");
     addEventListener("resize", (e) => {
         $("#body > div").css("height", innerHeight + "px");
