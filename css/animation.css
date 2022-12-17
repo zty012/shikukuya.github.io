@@ -1,0 +1,28 @@
+.bottom_to_top {
+    position: relative;
+    animation: bottom_to_top 1.5s;
+}
+@keyframes bottom_to_top {
+    0% {
+        opacity: 0.1;
+        top: 2em;
+    }
+    100% {
+        opacity: 1;
+        top: 0;
+    }
+}
+.top_to_bottom {
+    position: relative;
+    animation: top_to_bottom 1.5s;
+}
+@keyframes top_to_bottom {
+    0% {
+        opacity: 0.1;
+        bottom: 2em;
+    }
+    100% {
+        opacity: 1;
+        bottom: 0;
+    }
+}

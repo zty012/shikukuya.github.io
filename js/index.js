@@ -1,10 +1,21 @@
 $(() => {
     let current = 1;
+    const page_animation = {
+        page1: (animate) => {},
+        page2: (animate) => {
+            $("#p2 h2:nth-child(5)").addClass(animate);
+            setTimeout(() => {
+                $("#p2 h2:nth-child(5)").removeClass(animate);
+            }, 1500);
+        },
+        page3: (animate) => {},
+    }
     const next = async () => {
         console.log("next");
         if (current < $("#body > div").length) {
             current++;
             $(`#body > div:nth-child(${current})`)[0].scrollIntoView();
+            eval(`page_animation.page${current}("bottom_to_top")`);
         }
     };
     const prev = async () => {
@@ -12,6 +23,7 @@ $(() => {
         if (current > 0) {
             current--;
             $(`#body > div:nth-child(${current})`)[0].scrollIntoView();
+            eval(`page_animation.page${current}("top_to_bottom")`);
         }
     };
     const menu = () => {
@@ -32,9 +44,6 @@ $(() => {
     });
     $("#next")[0].addEventListener("click", (e) => {
         next();
-    });
-    $("#menu")[0].addEventListener("click", (e) => {
-        menu();
     });
     $("#body > div:first-child")[0].scrollIntoView();
     $("#body > div").css("height", innerHeight + "px");
