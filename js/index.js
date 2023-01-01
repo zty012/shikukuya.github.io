@@ -143,7 +143,6 @@ $(() => {
                 next()
             }
         })
-        $('#body > div:first-child')[0].scrollIntoView()
     }
     //#endregion
 })
