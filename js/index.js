@@ -29,6 +29,12 @@ $(() => {
      */
     let current = 1
     /**
+     * 移动端：开始滚动页面时，页面的offset.top值
+     * 
+     * @type {undefined | number}
+     */
+    let offset_top_backup;
+    /**
      * 翻页动画
      * 
      * 调用：page_animation.page{page}('{animation_name}')
@@ -89,29 +95,43 @@ $(() => {
         $('#body').draggable({
             drag: (e, params) => {
                 log('页面滚动(移动端)', `top:${params.offset.top}`)
-                if (params.offset.top > 130) {
-                    log('页面滚动(移动端)', 'top > 130，停止滚动')
-                    return false
-                }
-                if (params.offset.top < -80) {
-                    log('页面滚动(移动端)', 'top < -80，停止滚动')
-                    return false
+                if (typeof offset_top_backup === 'undefined') {
+                    offset_top_backup = params.offset.top
+                    log('页面滚动(移动端)', `开始滚动，top_backup:${offset_top_backup}`)
+                } else {
+                    if (params.offset.top > offset_top_backup) {
+                        if (is_first()) {
+                            $('#body').css('top', `${offset_top_backup}px`)
+                            offset_top_backup = undefined
+                            return false
+                        }
+                    }
+                    if (params.offset.top < offset_top_backup) {
+                        if (is_last()) {
+                            $('#body').css('top', `${params.offset.top}px`)
+                            offset_top_backup = undefined
+                            return false
+                        }
+                    }
                 }
             },
             stop: (e, params) => {
-                log('停止滚动(移动端)', `top:${params.offset.top}`)
-                if (params.offset.top > 130) {
-                    if (!is_first()) {
+                log('停止滚动(移动端)', `top:${params.offset.top} top_backup:${offset_top_backup}`)
+                if (params.offset.top > offset_top_backup) {
+                    if (params.offset.top - offset_top_backup > 100) {
+                        offset_top_backup = undefined
                         return prev()
                     }
                 }
-                if (params.offset.top < -80) {
-                    if (!is_last()) {
+                if (params.offset.top < offset_top_backup) {
+                    if (offset_top_backup - params.offset.top > 100) {
+                        offset_top_backup = undefined
                         return next()
                     }
                 }
-                log('停止滚动(移动端)', '-80 < top < 130，重置top')
-                $(`#body > div:nth-child(${current})`)[0].scrollIntoView()
+                log('停止滚动(移动端)', 'top变化过小，重置top')
+                $('#body').css('top', `${offset_top_backup}px`)
+                offset_top_backup = undefined
             }
         })
     } else {

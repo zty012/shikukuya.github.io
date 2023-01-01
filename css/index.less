@@ -2,7 +2,6 @@
 @import url(/css/codicon.css);
 @import url(https://rsms.me/inter/inter.css);
 
-// 注意：index.js第90行附近的数值取决于nav_height，请不要直接修改nav_height
 @nav_height: 50px;
 
 * {
@@ -56,4 +55,8 @@ html {
         height: calc(100vh - @nav_height);
         padding-top: @nav_height;
     }
+}
+
+.gllue-toolbar {
+    display: none !important;
 }

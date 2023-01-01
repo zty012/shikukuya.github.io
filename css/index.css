@@ -44,3 +44,6 @@ html body {
   height: calc(100vh - 50px);
   padding-top: 50px;
 }
+.gllue-toolbar {
+  display: none !important;
+}
