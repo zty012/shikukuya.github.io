@@ -1,0 +1,59 @@
+@import url(/css/animation.css);
+@import url(/css/codicon.css);
+@import url(https://rsms.me/inter/inter.css);
+
+// 注意：index.js第90行附近的数值取决于nav_height，请不要直接修改nav_height
+@nav_height: 50px;
+
+* {
+    font-family: 'Inter var experimental', 'Inter var', 'Inter', system-ui, -apple-system, sans-serif;
+    cursor: default;
+}
+
+html {
+    scroll-behavior: smooth;
+
+    body {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        margin: 0;
+        user-select: none;
+    }
+}
+
+#nav {
+    padding: 0 1em;
+    height: @nav_height;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #eee;
+    box-shadow: #999 0 0 1em;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 999;
+
+    span:first-child {
+        flex: 1;
+    }
+
+    .codicon {
+        font-size: 1.5em;
+    }
+}
+
+#body {
+    background-color: #fff;
+    width: 100%;
+
+    // 移动端适配：阻止左右拖动
+    left: 0 !important;
+
+    div {
+        overflow: hidden;
+        height: calc(100vh - @nav_height);
+        padding-top: @nav_height;
+    }
+}

@@ -1,1 +1,7 @@
-{"typeAcquisition": {"include": ["jquery"]}}
+{
+    "typeAcquisition": {
+        "include": [
+            "jquery"
+        ]
+    }
+}

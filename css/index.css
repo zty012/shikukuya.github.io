@@ -1,49 +1,46 @@
 @import url(/css/animation.css);
-
+@import url(/css/codicon.css);
+@import url(https://rsms.me/inter/inter.css);
 * {
-    font-family: "Inter var", Inter, system-ui, -apple-system, sans-serif;
-    cursor: default;
+  font-family: 'Inter var experimental', 'Inter var', 'Inter', system-ui, -apple-system, sans-serif;
+  cursor: default;
 }
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
-body {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    margin: 0;
-}
-.codicon-menu {
-    /* codicon的menu太宽了 */
-    width: 0.8em;
-    margin-right: 5px;
-    overflow: hidden;
+html body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  user-select: none;
 }
 #nav {
-    padding: 0 1em;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-    position: fixed;
-    left: 0;
-    right: 0;
-    z-index: 999;
+  padding: 0 1em;
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #eee;
+  box-shadow: #999 0 0 1em;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 999;
 }
 #nav span:first-child {
-    flex: 1;
-    margin-right: 1em;
+  flex: 1;
 }
 #nav .codicon {
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
 #body {
-    background-color: #fff;
-    position: absolute;
-    width: 100%;
-    height: calc(100% - 50px);
+  background-color: #fff;
+  width: 100%;
+  left: 0 !important;
 }
-#body > div {
-    overflow: hidden;
+#body div {
+  overflow: hidden;
+  height: calc(100vh - 50px);
+  padding-top: 50px;
 }
-
