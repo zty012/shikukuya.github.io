@@ -88,6 +88,13 @@ $(() => {
         }
     }
     //#endregion
+    //#region 检测不兼容的浏览器扩展
+    setTimeout(() => {
+        if ('supercopy' in window) {
+            document.body.innerHTML = '<h2>检测到不兼容的扩展：supercopy，请使用无痕模式</h2>'
+        }
+    }, 300)
+    //#endregion
     //#region 加载页面
     log('开始加载页面', `移动端: ${mobile}`)
     $('#body > div:first-child')[0].scrollIntoView()
