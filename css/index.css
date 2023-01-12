@@ -1,5 +1,6 @@
-@import url(/css/animation.css);
-@import url(/css/codicon.css);
+@import url(animation.css);
+@import url(codicon.css);
+@import url(element.css);
 @import url(https://rsms.me/inter/inter.css);
 * {
   font-family: 'Inter var experimental', 'Inter var', 'Inter', system-ui, -apple-system, sans-serif;
@@ -28,11 +29,15 @@ html body {
   right: 0;
   z-index: 999;
 }
+#nav * {
+  margin: auto 5px;
+}
 #nav span:first-child {
   flex: 1;
 }
 #nav .codicon {
   font-size: 1.5em;
+  padding-top: 1px;
 }
 #body {
   background-color: #fff;
@@ -47,3 +52,4 @@ html body {
 .gllue-toolbar {
   display: none !important;
 }
+/*# sourceMappingURL=./index.css.map */

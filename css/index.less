@@ -1,5 +1,6 @@
-@import url(/css/animation.css);
-@import url(/css/codicon.css);
+@import url(./animation.css);
+@import url(./codicon.css);
+@import url(./element.css);
 @import url(https://rsms.me/inter/inter.css);
 
 @nav_height: 50px;
@@ -34,12 +35,17 @@ html {
     right: 0;
     z-index: 999;
 
+    * {
+        margin: auto 5px;
+    }
+
     span:first-child {
         flex: 1;
     }
 
     .codicon {
         font-size: 1.5em;
+        padding-top: 1px;
     }
 }
 
