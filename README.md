@@ -12,6 +12,10 @@
 
 鉴 定 为 n u x t . j s
 
+## 为什么不用 [mi18n](https://github.com/Draggable/mi18n)
+
+…………
+
 ## 你也可以制作这样的网站
 
 此软件依照 WTFPL 发行，你tm做出啥都行
