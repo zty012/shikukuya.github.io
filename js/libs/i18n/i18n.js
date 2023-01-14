@@ -1,6 +1,13 @@
 import * as languages from "./lang.js";
+import log from "../logger/logger.js";
 
-export function i18n(lang = undefined, node = document.body) {
+/**
+ * 国际化
+ * 
+ * @param {object} lang 语言对象
+ * @param {Element} node 要国际化的dom树
+ */
+export function i18n(lang, node = document.body) {
     if (typeof lang === "undefined") {
         if (window.localStorage.getItem("lang") === null) {
             window.localStorage.setItem("lang", "zh_CN");
@@ -9,16 +16,15 @@ export function i18n(lang = undefined, node = document.body) {
             lang = eval(`languages.${window.localStorage.getItem("lang")}`);
         }
     }
-    for (let el of node.querySelectorAll("[data-key]")) {
-        if (el.dataset.key in lang) {
-            el.innerText = lang[el.dataset.key];
-        } else {
-            el.innerText = el.dataset.key;
+    for (let key of Object.keys(lang)) {
+        log("国际化", "处理 " + key.replaceAll("_", "."))
+        for (let el of node.querySelectorAll("*")) {
+            el.innerHTML = el.innerHTML.replaceAll(`\{${key.replaceAll("_", ".")}\}`, lang[key]);
         }
     }
 }
 
-export function defaultlang(lang = undefined) {
+export function defaultlang(lang) {
     if (typeof lang === "undefined") {
         if (window.localStorage.getItem("lang") === null) {
             return "zh_CN";

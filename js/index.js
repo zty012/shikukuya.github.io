@@ -5,24 +5,11 @@ import "./libs/jquery/jquery-ui.js";
 import "./libs/jquery/jquery-ui-touch-punch.js";
 // i18n
 import * as i18n from "./libs/i18n/i18n.js";
+// logger
+import log from "./libs/logger/logger.js";
 
 $(() => {
     //#region 方法和变量定义
-    /**
-     * 在控制台打印日志，格式：[type] info
-     *
-     * 只能打印string,number，打印object请使用console.log
-     *
-     * @param {string} type 日志发送者，即方括号中的内容
-     * @param {string | number} info 日志内容
-     */
-    const log = (type, info) => {
-        console.log(
-            `%c[${type || ""}] %c${info || ""}`,
-            "color: lightblue; font-weight: bold;",
-            ""
-        );
-    };
     /**
      * 是否为移动端访问
      *
@@ -47,19 +34,21 @@ $(() => {
      * @type {object}
      */
     const page_animation = {
-        page1: (animate) => {
+        page1: function (animate) {
             $("#p1 h2:nth-child(5)").addClass(animate);
             setTimeout(() => {
                 $("#p1 h2:nth-child(5)").removeClass(animate);
             }, 1500);
         },
-        page2: (animate) => {
+        page2: function (animate) {
             $("#p2 h2:nth-child(5)").addClass(animate);
             setTimeout(() => {
                 $("#p2 h2:nth-child(5)").removeClass(animate);
             }, 1500);
         },
-        page3: (animate) => {},
+        page3: function (animate) {
+            //
+        },
     };
     /**
      * 是否为第一页
@@ -76,7 +65,7 @@ $(() => {
     /**
      * 下一页
      */
-    const next = () => {
+    const next = function () {
         if (!is_last()) {
             current++;
             log("下一页", `当前页数 ${current}`);
@@ -88,7 +77,7 @@ $(() => {
     /**
      * 上一页
      */
-    const prev = () => {
+    const prev = function () {
         if (!is_first()) {
             current--;
             log("上一页", `当前页数 ${current}`);
@@ -102,7 +91,7 @@ $(() => {
      * 
      * @param {number} page 页数
      */
-    const goto = (page) => {
+    const goto = function (page) {
         var current_ = current;
         current = page;
         log("跳转页面", `当前页数 ${current}`);

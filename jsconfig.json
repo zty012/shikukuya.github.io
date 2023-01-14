@@ -2,6 +2,7 @@
     "typeAcquisition": {
         "include": [
             "jquery"
-        ]
+        ],
+        "enable": true
     }
 }
